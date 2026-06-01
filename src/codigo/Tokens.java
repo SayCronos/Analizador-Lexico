@@ -39,5 +39,10 @@ public enum Tokens {
     P_coma,
     Identificador,
     Numero,
+    Switch,
+    Case,
+    Break,
+    Default,
+    Dos_puntos,
     ERROR
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package codigo;
 
 import java.io.File;
@@ -11,10 +6,6 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-/**
- *
- * @author Charly Ponce
- */
 public class Principal {
     public static void main(String[] args) throws Exception {
         String ruta1 = "C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/Lexer.flex";
@@ -34,16 +25,19 @@ public class Principal {
         if (Files.exists(rutaSym)) {
             Files.delete(rutaSym);
         }
+        // CORRECCIÓN AQUÍ: Tomar "sym.java" suelto y moverlo a la ruta
         Files.move(
-                Paths.get("C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/sym.java"), 
+                Paths.get("sym.java"), 
                 Paths.get("C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/sym.java")
         );
+        
         Path rutaSin = Paths.get("C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/Sintax.java");
         if (Files.exists(rutaSin)) {
             Files.delete(rutaSin);
         }
+        // CORRECCIÓN AQUÍ: Tomar "Sintax.java" suelto y moverlo a la ruta
         Files.move(
-                Paths.get("C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/Sintax.java"), 
+                Paths.get("Sintax.java"), 
                 Paths.get("C:/Users/RIDCO/Downloads/AnalizadorLexico/src/codigo/Sintax.java")
         );
     }

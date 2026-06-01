@@ -47,6 +47,21 @@ espacio=[ ,\t,\r]+
 /* Operador Igual */
 ( "=" ) {lexeme=yytext(); return Igual;}
 
+/* Palabra reservada Switch */
+( switch ) {lexeme=yytext(); return Switch;}
+
+/* Palabra reservada Case */
+( case ) {lexeme=yytext(); return Case;}
+
+/* Palabra reservada Break */
+( break ) {lexeme=yytext(); return Break;}
+
+/* Palabra reservada Default */
+( default ) {lexeme=yytext(); return Default;}
+
+/* Dos puntos */
+( ":" ) {lexeme=yytext(); return Dos_puntos;}
+
 /* Operador Suma */
 ( "+" ) {lexeme=yytext(); return Suma;}
 

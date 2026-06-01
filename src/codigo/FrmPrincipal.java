@@ -131,6 +131,21 @@ public class FrmPrincipal extends javax.swing.JFrame {
                 case Numero:
                     resultado += "  <Numero>\t\t" + lexer.lexeme + "\n";
                     break;
+                case Switch:
+                    resultado += "  <Reservada switch>\t" + lexer.lexeme + "\n";
+                    break;
+                case Case:
+                    resultado += "  <Reservada case>\t" + lexer.lexeme + "\n";
+                    break;
+                case Break:
+                    resultado += "  <Reservada break>\t" + lexer.lexeme + "\n";
+                    break;
+                case Default:
+                    resultado += "  <Reservada default>\t" + lexer.lexeme + "\n";
+                    break;
+                case Dos_puntos:
+                    resultado += "  <Dos puntos>\t\t" + lexer.lexeme + "\n";
+                    break;
                 case ERROR:
                     resultado += "  <Simbolo no definido>\n";
                     break;

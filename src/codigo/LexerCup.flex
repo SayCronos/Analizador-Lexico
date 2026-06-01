@@ -53,6 +53,21 @@ espacio=[ ,\t,\r,\n]+
 /* Palabra reservada For */
 ( for ) {return new Symbol(sym.For, yychar, yyline, yytext());}
 
+/* Palabra reservada Switch */
+( switch ) {return new Symbol(sym.Switch, yychar, yyline, yytext());}
+
+/* Palabra reservada Case */
+( case ) {return new Symbol(sym.Case, yychar, yyline, yytext());}
+
+/* Palabra reservada Break */
+( break ) {return new Symbol(sym.Break, yychar, yyline, yytext());}
+
+/* Palabra reservada Default */
+( default ) {return new Symbol(sym.Default, yychar, yyline, yytext());}
+
+/* Dos puntos */
+( ":" ) {return new Symbol(sym.Dos_puntos, yychar, yyline, yytext());}
+
 /* Operador Igual */
 ( "=" ) {return new Symbol(sym.Igual, yychar, yyline, yytext());}
 
